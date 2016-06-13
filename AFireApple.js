@@ -39,7 +39,7 @@ function createA(n) {
   return output.replace(/\n\s*$/, '');
 }
 
-for (var i = 0; i < 50; i++) {
+for (var i = 0; i < 24; i++) {
 
   console.log(createA(i));
   console.log(new Array(10).join('-'));
