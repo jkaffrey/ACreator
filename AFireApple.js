@@ -16,21 +16,21 @@ function createA(n) {
   for (var i = 0; i < n + 1; i++) {
 
     var empty = new Array(2*n - 1).join(' ').split(' ');
-    var As = new Array(i + 1).join('A');
 
     for (var j = 0; j < i + 1; j++) {
       var center = Math.floor(empty.length / 2);
-      for (var adex = 0; adex < As.length; adex++) {
+      for (var adex = 0; adex < i; adex++) {
 
         empty[center - adex] = 'A';
       }
     }
 
     if (i !== (n/2) + 1) {
-      for (var fA = empty.indexOf('A') + 1; fA < empty.lastIndexOf('A'); fA++) {
-
-        empty[fA] = ' ';
-      }
+      empty.forEach(function(ele, index) {
+        if (index > empty.indexOf('A') && index < empty.lastIndexOf('A')) {
+          empty[index] = ' ';
+        }
+      });
     }
 
     output += empty.join(' ') + '\n';
