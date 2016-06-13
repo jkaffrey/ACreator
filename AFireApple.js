@@ -36,7 +36,7 @@ function createA(n) {
     output += empty.join(' ') + '\n';
   }
 
-  return output;
+  return output.replace(/\n\s*$/, '');
 }
 
 var aTests = [4, 5, 8, 12, 16, 24];
