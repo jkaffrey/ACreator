@@ -39,11 +39,9 @@ function createA(n) {
   return output.replace(/\n\s*$/, '');
 }
 
-var aTests = [4, 5, 8, 12, 16, 24];
+for (var i = 0; i < 50; i++) {
 
-for (var i = 0; i < aTests.length; i++) {
-
-  console.log(createA(aTests[i]));
+  console.log(createA(i));
   console.log(new Array(10).join('-'));
 }
 //console.log(createA(12));
